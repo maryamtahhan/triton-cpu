@@ -1,0 +1,36 @@
+{
+  "name": "Triton-CPU",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // "args":{
+    //   // Uncomment to use root (not recommended)
+    //   "USERNAME": "0"
+    // }
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.debugpy",
+        "ms-python.flake8",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cpptools-themes",
+        "twxs.cmake"
+      ],
+    }
+  },
+  "features": {},
+  "postStartCommand": "${containerWorkspaceFolder}/.devcontainer/triton-cpu/postStartCommand.sh",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "onCreateCommand": "${containerWorkspaceFolder}/.devcontainer/triton-cpu/onCreateCommand.sh",
+  "updateContentCommand": "${containerWorkspaceFolder}/.devcontainer/triton-cpu/updateContentCommand.sh",
+  "hostRequirements": {
+    "cpus": 4,
+    "gpu": false
+  }
+}

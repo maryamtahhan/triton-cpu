@@ -9,7 +9,7 @@ subdirectory (similar to how GPU vendors are supported today).  We're starting
 with a clone to give ourselves maximum development flexibility as this project
 gets off the ground!
 
-# How to use it?
+## How to use it?
 
 Build it like a normal Triton, but just pass TRITON_CPU_BACKEND=1 to use the CPU backend over a GPU backend, if any.
 
@@ -17,7 +17,36 @@ Build it like a normal Triton, but just pass TRITON_CPU_BACKEND=1 to use the CPU
 TRITON_CPU_BACKEND=1 python3 tutorials/01-vector-add.py
 ```
 
-**NOTE: It's still work in progress.**
+## Development Container (Dev Container)
+
+This project includes a **Dev Container** specification that provides a
+consistent, isolated development environment. With this setup, you can
+develop and build the Triton project as well as run its tutorials seamlessly.
+
+### Key Benefits:
+- **Consistency**: All developers can work with the same development
+  environment, ensuring uniform behavior across different systems.
+- **Isolation**: The container prevents potential conflicts with software
+  installed on your local machine.
+- **Portability**: Easily share the development environment with team members,
+  minimizing onboarding time and setup issues.
+
+### How to Use the Dev Container:
+1. **Visual Studio Code (Locally)**:
+   - Open the project in VS Code and use the *Dev Containers* extension to
+     launch the environment.
+   - Simply choose **“Reopen in Container”**, and VS Code will build and
+     attach the container for you.
+
+2. **GitHub Codespaces**:
+   - If you prefer working in the cloud, the Dev Container is compatible with
+    [GitHub Codespaces](https://docs.github.com/en/codespaces/overview), allowing
+    you to develop directly in your browser with minimal local setup.
+
+### More Information:
+For further details, refer to the [GSG](./.devcontainer/gsg/devcontainer.md) or
+the [introduction to Dev Containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
+provided by GitHub.
 
 ---
 
